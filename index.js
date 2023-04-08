@@ -6,12 +6,12 @@ const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 app.get('/',(req,res)=>{
-    res.send('Live')
+    res.send('Live on the server,head on to /api to check for the api and /api/testing to see them along with query params')
 })
 
 const ProdRoute = require('./Routes/list');
 
-app.use('/api/products',ProdRoute);
+app.use('/api',ProdRoute);
 
 const start = async ()=>{
     try {
