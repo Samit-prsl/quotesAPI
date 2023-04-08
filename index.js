@@ -15,7 +15,7 @@ app.use('/api/products',ProdRoute);
 
 const start = async ()=>{
     try {
-        await connectdb(process.env.MONGO_URI);
+        await connectdb('mongodb+srv://samit:28QOB7IRA5p2Zdif@samitapi.buguzwg.mongodb.net/ProductAPI?retryWrites=true&w=majority');
         app.listen(PORT,()=>{
             console.log(`Server listening at ${PORT}`);
         })
