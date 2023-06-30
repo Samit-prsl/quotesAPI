@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 app.get('/',(req,res)=>{
-    res.send('Hello here its live on the server,head on to /api to check for the api and /api/testing to see them along with query params')
+    res.send('Hello here its live on the server head on to /api to check for the api and /api/testing to see them along with query params')
 })
 
 const ProdRoute = require('./Routes/list');
